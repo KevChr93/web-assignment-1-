@@ -1,0 +1,309 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="assignment1">
+    <meta name="author" content="kevin christopher 815007355">
+    <title>KC.Collection</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="../web assignment/css/style.css">
+    <!-- truely fed up  -->
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load('current', {'packages':['gantt']});
+      google.charts.setOnLoadCallback(drawChart);
+  
+      function drawChart() {
+  
+        var data = new google.visualization.DataTable();
+        data.addColumn('string', 'Task ID');
+        data.addColumn('string', 'Task Name');
+        data.addColumn('string', 'Resource');
+        data.addColumn('date', 'Start Date');
+        data.addColumn('date', 'End Date');
+        data.addColumn('number', 'Duration');
+        data.addColumn('number', 'Percent Complete');
+        data.addColumn('string', 'Dependencies');
+  
+        data.addRows([
+         
+          ['SUBMIT ORDER', 'AVERAGE TIME TO COMPLETION', 'ORDER',
+
+          new Date(2019, 0, 2), new Date(2019, 0, 20), null, 100, null],
+
+          
+        ]);
+  
+        var options = {
+          height: 100,
+          gantt: {
+            trackHeight: 30
+          }
+        };
+  
+        var chart = new google.visualization.Gantt(document.getElementById('chart_div'));
+  
+        chart.draw(data, options);
+      }
+    </script>
+</head>
+
+
+<body>
+
+    <header>
+        <section id="navbar">
+
+            <!--Navbar -->
+            <nav class="navbar navbar-expand-lg navbar-dark cyan fixed-top">
+                <div class="container">
+                    <a class="navbar-brand" href="home.html">
+                        <img src="../web assignment/media/comp/logo.png" alt="KcCollections">
+                    </a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent-4"
+                        aria-controls="navbarSupportedContent-4" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent-4">
+
+                        <!-- unordered list  -->
+                        <ul class="navbar-nav ml-auto">
+                            <li class="nav-item ">
+                                <a class="nav-link" href="home.html">Home <span class="sr-only">(current)</span></a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="portfolio.html">Portfolio</a>
+                            </li>
+                            <li class="nav-item active">
+                                <a class="nav-link" href="hireMe.html">ORDER NOW</a>
+                            </li>
+                         
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+            <hr>
+            <!--/.Navbar -->
+        </section>
+        <!--slides -->
+    </header>
+
+    <section id="hireme">
+
+
+
+        <hr>
+        <hr>
+        <hr>
+        <h1>Package Details</h1>
+        <table class="table table-striped table-dark">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Package</th>
+                    <th scope="col">Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th scope="row">1</th>
+                    <td>Basic sketch</td>
+                    <td>sketch outlines based on photo refrence </td>
+                </tr>
+                <tr>
+                    <th scope="row">2</th>
+                    <td>Basic Rhoto recreation </td>
+                    <td>photo refrence is used to create a digital painting of the person or persons </td>
+                </tr>
+                <tr>
+                    <th scope="row">3</th>
+                    <td>Custom creations</td>
+                    <td>An imaginative composition based on photo refrences and detailed instructions. a one of a kind
+                        art piece
+                        eg : an individual as their favorate hero.
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="clearfix">
+            <h1>When placing an order you should:</h1>
+            <ol class="nest">
+                <li>Decide on package:</li>
+                <ol type="A">
+                    <li>Sketch</li>
+                    <li>Photo Recreation</li>
+                    <li>Custom Original</li>
+                </ol>
+                <li>fill out order form</li>
+
+            </ol>
+            <ol start="3" class="nest2">
+                <li>be sure to include:</li>
+                <ul class="a">
+                    <li>Refrence photos</li>
+                    <li>Detailed instructions</li>
+                    <li>Date needed by</li>
+                </ul>
+                <li>
+                    Await confirmation and Quotation
+                </li>
+            </ol>
+        </div>
+
+        <hr>
+        <section id="orderform">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 text-center">
+                        <h2 class="section-heading text-uppercase">Order Form</h2>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-12">
+                        <form id="OrderForm" onsubmit="myFunction()" action="#" method="get"  name="submit">
+
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <input class="form-control" id="name" type="text" placeholder="Your Name *"
+                                            required="required" data-validation-required-message="Please enter your name.">
+                                        <p class="help-block text-danger"></p>
+                                    </div>
+                                    <div class="form-group">
+                                        <input class="form-control" id="email" type="email" placeholder="Your Email *"
+                                            required="required" data-validation-required-message="Please enter your email address.">
+                                        <p class="help-block text-danger"></p>
+                                    </div>
+                                    <div class="form-group">
+                                            <input class="form-control" id="phone" type="tel" placeholder="Contact No. *"
+                                                required="required" data-validation-required-message="Please enter your phone number.">
+                                            <p class="help-block text-danger"></p>
+                                        </div>
+                                           <div class="form-group">
+                                                <select name="Area" form="OrderForm">
+                                                        <option value="volvo">*area*</option>
+                                                        <option value="saab">North</option>
+                                                        <option value="opel">East</option>
+                                                        <option value="audi">South</option>
+                                                        <option value="audi">West</option>
+                                                      </select>
+                                                <p class="help-block text-danger"></p>
+                                            </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <textarea class="form-control" id="message" placeholder="Order Description *"
+                                            required="required" data-validation-required-message="Please enter the detailsof your order."></textarea>
+                                        <p class="help-block text-danger"></p>
+                                    </div>
+                                    <div class="form-group">
+                                        <input class="form-control" id="date" type="date" placeholder="Deadline Date*"
+                                            required="required" data-validation-required-message="Please enter the date you need your order by.">
+                                        <p class="help-block text-danger"></p>
+                                    </div>
+                                    <input class="form-control" type="file" name="pic" placeholder="Reference pic*"
+                                        accept="image/*">
+                                    <p class="help-block text-danger"></p>
+
+                                    <div class="form-group">
+                                        <input class="form-control" id="persons" type="number" placeholder="Number of persons *"
+                                            required="required" data-validation-required-message="Please enter your email address.">
+                                        <p class="help-block text-danger"></p>
+                                    </div>
+                                </div>
+                                <div class="clearfix"></div>
+                                <div class="col-lg-12 text-center">
+                                    <div id="success"></div>
+                                    <button id="SubmitOrderbtn" class="btn btn-primary btn-xl text-uppercase" onclick="verify()"type="submit">
+                                        Submit Order</button>
+                                    <hr>
+
+
+
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+<h1>Process Time Breakdown</h1>
+      <DIV class="container-fluid padding">
+            <div id="chart_div"></div>
+            <h3>on average the entire process can be completed in 2 weeks</h3>
+      </DIV>
+       
+
+    </section>
+
+    <section id="newsletter">
+
+
+            <hr>
+            <h1> Be the FIRST to know about our limited time offers!</h1>
+            <button class="open-button" onclick="pro()">Signup for our Newsletter</button>
+
+        </section>
+
+
+
+    <!-- footerz -->
+    <div id="footerz">
+        <footer class="container-fluid padding">
+            <div class="row text-center">
+                <div class="col-md-4">
+                    <img src="../web assignment/media/comp/logo.png" height="100px">
+                    <hr class="light">
+                    <p>We believe art is dynamic, personal and connected to now,
+                        and the experience of buying and living with it should be too.
+                        From the moment you browse our site to the day your art is delivered,
+                        our team has one goal in mind: to delight you every step of the way. </p>
+                </div>
+                <div class="col-md-4">
+                    <hr>
+                    <h5> Contact us </h5>
+                    <hr>
+
+                    <p>Phone: +1-868-319-3655</p>
+                    <p> email: kevin.christopher@my.uwi.edu</p>
+                    </p>
+
+                </div>
+                <div class="col-md-4">
+                    <hr>
+                    <h5> Location </h5>
+                    <hr>
+                    <p>sangre grande</p>
+                    <p> delivery available</p>
+                    </p>
+                </div>
+
+
+                <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+
+                <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+                    crossorigin="anonymous"></script>
+
+                <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+                    crossorigin="anonymous"></script>
+                <script src="../web assignment/javascript/java.js"></script>
+
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.js"></script>
+                <!-- Custom JavaScript -->
+
+                <hr class="light-100">
+                <div class="col-md-12">
+                    <p>&copy; All Rights Reserved <a href="#" target="_blank">KcCollections</a> </p>
+                </div>
+                </section>
+        </footer>
+    </div>
+
+</html>
+</body>
